@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Project from './Project';
 
+import real from '../images/real.webm'
+
 const ProjectsWrapper = styled.section`
   display: flex;
   justify-content: center;
@@ -46,7 +48,7 @@ export default function Projects() {
           </Description>
           <WorkWrapper className='work__wrapper'>
             <Animation className='work--animation'>
-              <Project title=' ' bgwebm='' github=' ' external=' ' />
+              <Project title='Django Real Estate Website' bgwebm={real} github='https://github.com/petrmbugua/Django-Real-Estate-Website' external='https://github.com/petrmbugua/Django-Real-Estate-Website' />
             </Animation>
           </WorkWrapper>
         </div>

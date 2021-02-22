@@ -73,7 +73,7 @@ export default function Hero() {
             <Left className='hero__left'>
               <Greeting className='colored'>Hi, I am</Greeting>
               <Author>Peter Mbugua</Author>
-              <Role className='hero__sub'>Full Stack</Role>
+              <Role className='hero__sub'>Full Stack Web Developer</Role>
               <Description className='hero__desc section__desc'>
               I love learning new technologies, with focus on full stack technologies, front-end design and functionality. My personal style is simple, modern interactive, responsive and effective.
               </Description>
