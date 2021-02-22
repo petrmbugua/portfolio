@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import Scrollspy from 'react-scrollspy';
 import Resume from './Resume';
 
@@ -32,7 +31,8 @@ const Navbar = styled.nav`
     }
   }
 `;
-const LinkItem = styled(Link)`
+
+const Button = styled.a`
   margin-right: 20px;
   transition: 0.2s;
   text-shadow: 0px 0px 10px black;
@@ -55,29 +55,29 @@ const Header = () => {
         items={['home', 'about', 'projects', 'contact']}
         currentClassName='colored'
       >
-        <LinkItem
-          to='/#home'
+        <Button
+          href='/#home'
           className='navbar__link'
           style={{ display: 'none' }}
         >
           Home
-        </LinkItem>
-        <LinkItem to='/about' onClick={() => setCondition(!condition)}>
+        </Button>
+        <Button href='/#about' onClick={() => setCondition(!condition)}>
           About
-        </LinkItem>
-        <LinkItem to='/projects' onClick={() => setCondition(!condition)}>
+        </Button>
+        <Button href='/#projects' onClick={() => setCondition(!condition)}>
           Projects
-        </LinkItem>
+        </Button>
 
-        <LinkItem to='/contact' onClick={() => setCondition(!condition)}>
+        <Button href='/#contact' onClick={() => setCondition(!condition)}>
           Contact
-        </LinkItem>
+        </Button>
         <Resume />
       </Scrollspy>
       <Navbar id='navbar' className='navbar__container container--secondary'>
-        <LinkItem to='/' className='navbar__logo'>
+        <Button href='/#home' className='navbar__logo'>
           Peter Mbugua
-        </LinkItem>
+        </Button>
         <div className='hamburger__container'>
           <button
             aria-label='menu'
@@ -103,19 +103,19 @@ const Header = () => {
           items={['home', 'about', 'projects', 'contact']}
           currentClassName='colored'
         >
-          <LinkItem to='/' className='navbar__link' style={{ display: 'none' }}>
+          <Button href='/#home' className='navbar__link' style={{ display: 'none' }}>
             Home
-          </LinkItem>
-          <LinkItem to='/about' className='navbar__link'>
+          </Button>
+          <Button href='/#about' className='navbar__link'>
             About
-          </LinkItem>
-          <LinkItem to='/projects' className='navbar__link'>
+          </Button>
+          <Button href='/#projects' className='navbar__link'>
             Projects
-          </LinkItem>
+          </Button>
 
-          <LinkItem to='/contact' className='navbar__link'>
+          <Button href='/#contact' className='navbar__link'>
             Contact
-          </LinkItem>
+          </Button>
           <Resume />
         </Scrollspy>
       </Navbar>
