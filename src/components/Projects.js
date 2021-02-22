@@ -6,6 +6,13 @@ import real from '../images/real.webm';
 import mern_ecommerce from '../images/mern-ecommerce.webm';
 import typescript_cart from '../images/typescript-cart.webm';
 
+
+import aberdare from '../images/aberdare.webm';
+import scog from '../images/scog.webm';
+import digital from '../images/digital.webm';
+import boiler from '../images/boiler.webm';
+
+
 const ProjectsWrapper = styled.section`
   display: flex;
   justify-content: center;
@@ -75,6 +82,43 @@ export default function Projects() {
                 external='https://github.com/petrmbugua/Shopping-Cart-with-React-and-TypeScript'
               />
             </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='Django Flowers Website'
+                bgwebm={scog}
+                github='https://github.com/petrmbugua'
+                external='https://www.scogflowers.com/'
+              />
+            </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='Django Engineering Website'
+                bgwebm={boiler}
+                github='https://github.com/petrmbugua'
+                external='https://www.boilerengealtd.com/'
+              />
+            </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='Django Ecommerce'
+                bgwebm={digital}
+                github='https://github.com/petrmbugua'
+                external='https://digital-stores.tech/'
+              />
+            </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='Flowers Landing Page'
+                bgwebm={aberdare}
+                github='https://github.com/petrmbugua'
+                external='https://aberdareflowers.co.ke/'
+              />
+            </Animation>
+
           </WorkWrapper>
         </div>
       </div>
