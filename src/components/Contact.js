@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import emailjs from 'emailjs-com';
 
 const ContactSection = styled.section`
   display: flex;
@@ -118,30 +119,53 @@ const Textarea = styled.textarea`
 
 export default function Contact() {
   const resetForm = () => document.getElementById('contact-form').reset();
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault()
-  //     const name = document.getElementById('name').value
-  //     const email = document.getElementById('email').value
-  //     const message = document.getElementById('message').value
-  //     const success = document.getElementById('success')
-  //     const failure = document.getElementById('failure')
-  //     axios({
-  //       method: 'POST',
-  //       url: 'https://bartzalewski-v2-api.herokuapp.com/send',
-  //       data: {
-  //         name: name,
-  //         email: email,
-  //         message: message,
-  //       },
-  //     }).then((response) => {
-  //       if (response.data.msg === 'success') {
-  //         success.style.display = 'block'
-  //         resetForm()
-  //       } else if (response.data.msg === 'fail') {
-  //         failure.style.display = 'block'
-  //       }
-  //     })
-  //   }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const success = document.getElementById('success');
+    const failure = document.getElementById('failure');
+
+    emailjs
+      .sendForm(
+        'service_i2l9gln',
+        'template_m4rmxrs',
+        e.target,
+        'user_vVE3qxT4mpSPv1yHZp1I5'
+      )
+      .then(
+        (result) => {
+          // console.log(result.text);
+          success.style.display = 'block';
+          resetForm();
+        },
+        (error) => {
+          // console.log(error.text);
+          failure.style.display = 'block'
+        }
+      );
+
+    // const name = document.getElementById('name').value
+    // const email = document.getElementById('email').value
+    // const message = document.getElementById('message').value
+    // const success = document.getElementById('success')
+    // const failure = document.getElementById('failure')
+    // axios({
+    //   method: 'POST',
+    //   url: 'https://bartzalewski-v2-api.herokuapp.com/send',
+    //   data: {
+    //     name: name,
+    //     email: email,
+    //     message: message,
+    //   },
+    // }).then((response) => {
+    //   if (response.data.msg === 'success') {
+    //     success.style.display = 'block'
+    //     resetForm()
+    //   } else if (response.data.msg === 'fail') {
+    //     failure.style.display = 'block'
+    //   }
+    // })
+  };
 
   useEffect(() => {
     const inputs = document.querySelectorAll('.input__field-input');
@@ -184,7 +208,7 @@ export default function Contact() {
             Message failed to sent!
           </Failure>
           <Form
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
             method='POST'
             className='contact__wrapper'
             id='contact-form'
