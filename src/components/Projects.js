@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Project from './Project';
 
-import real from '../images/real.webm'
+import real from '../images/real.webm';
+import mern_ecommerce from '../images/mern-ecommerce.webm';
+import typescript_cart from '../images/typescript-cart.webm';
 
 const ProjectsWrapper = styled.section`
   display: flex;
@@ -48,7 +50,30 @@ export default function Projects() {
           </Description>
           <WorkWrapper className='work__wrapper'>
             <Animation className='work--animation'>
-              <Project title='Django Real Estate Website' bgwebm={real} github='https://github.com/petrmbugua/Django-Real-Estate-Website' external='https://github.com/petrmbugua/Django-Real-Estate-Website' />
+              <Project
+                title='Django Real Estate Website'
+                bgwebm={real}
+                github='https://github.com/petrmbugua/Django-Real-Estate-Website'
+                external='https://github.com/petrmbugua/Django-Real-Estate-Website'
+              />
+            </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='MERN Ecommerce Project'
+                bgwebm={mern_ecommerce}
+                github='https://github.com/petrmbugua/mern-ecommerce'
+                external='https://github.com/petrmbugua/mern-ecommerce'
+              />
+            </Animation>
+
+            <Animation className='work--animation'>
+              <Project
+                title='React TypeScript Project'
+                bgwebm={typescript_cart}
+                github='https://github.com/petrmbugua/Shopping-Cart-with-React-and-TypeScript'
+                external='https://github.com/petrmbugua/Shopping-Cart-with-React-and-TypeScript'
+              />
             </Animation>
           </WorkWrapper>
         </div>
