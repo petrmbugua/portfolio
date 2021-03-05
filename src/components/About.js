@@ -118,6 +118,14 @@ export default function About() {
 
               <Item>
                 <FontAwesomeIcon
+                  icon={['fab', 'vuejs']}
+                  className='skill__icon'
+                />
+                <ItemText>Vuejs / Nuxtjs</ItemText>
+              </Item>
+
+              <Item>
+                <FontAwesomeIcon
                   icon={['fab', 'php']}
                   className='skill__icon'
                 />

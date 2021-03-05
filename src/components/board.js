@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BoardBox from './boardBox';
 
-import aberdare from '../images/aberdare.webm';
+import delivery from '../images/delivery.webm';
 import scog from '../images/scog.webm';
 import digital from '../images/digital.webm';
 import boiler from '../images/boiler.webm';
@@ -34,9 +34,9 @@ const Board = () => {
     <BoardWrapper className='board__container'>
       <Grid className='board__grid'>
         <BoardBox
-          bgwebm={aberdare}
-          title='Aberdare Flowers'
-          url='https://aberdareflowers.co.ke/'
+          bgwebm={delivery}
+          title='MERN Delivery App'
+          url='https://tranquil-hamlet-31910.herokuapp.com/'
         />
         <BoardBox
           bgwebm={scog}

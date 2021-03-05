@@ -5,6 +5,7 @@ import Project from './Project';
 import real from '../images/real.webm';
 import mern_ecommerce from '../images/mern-ecommerce.webm';
 import typescript_cart from '../images/typescript-cart.webm';
+import delivery from '../images/delivery.webm'
 
 
 import aberdare from '../images/aberdare.webm';
@@ -56,6 +57,16 @@ export default function Projects() {
             Check out my portfolio!
           </Description>
           <WorkWrapper className='work__wrapper'>
+
+          <Animation className='work--animation'>
+              <Project
+                title='MERN Delivery Web App'
+                bgwebm={delivery}
+                github='https://github.com/petrmbugua/mern-delivery-website'
+                external='https://tranquil-hamlet-31910.herokuapp.com/'
+              />
+            </Animation>
+
             <Animation className='work--animation'>
               <Project
                 title='Django Real Estate Website'
