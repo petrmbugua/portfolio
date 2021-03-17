@@ -123,7 +123,7 @@ export default function Projects() {
 
             <Animation className='work--animation'>
               <Project
-                title='Flowers Landing Page'
+                title='Flowers Website Using Headless CMS Sanity.io'
                 bgwebm={aberdare}
                 github='https://github.com/petrmbugua'
                 external='https://aberdareflowers.co.ke/'
