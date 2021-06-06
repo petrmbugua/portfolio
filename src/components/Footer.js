@@ -101,7 +101,7 @@ const Footer = () => {
             <Description className='footer__credit'>
               Created by{' '}
               <a
-                href='https://github.com/petrmbugua'
+                href='https://github.com/mbuguap'
                 target='_blank'
                 rel='noopener noreferrer'
                 title='Peter Mbugua | Full Stack Developer'
